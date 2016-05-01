@@ -1,0 +1,10 @@
+<h1>$category.getName() tasks:</h1>
+
+<ul>
+  #foreach($definition in $Words.haveDefine())
+   <li>$Definition.getThaDef()</li>
+  #end
+</ul>
+
+<a href="/Words/$words.getId()/define/new">Add a new definition</a>
+<a href="/words">Dictionary</a>
