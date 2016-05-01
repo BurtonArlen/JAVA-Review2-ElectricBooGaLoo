@@ -25,4 +25,23 @@ public class Words {
     return mWord;
   }
 
+  public static ArrayList<Words> all() {
+    return werds;
+  }
+
+  public static void noWords() {
+    werds.clear();
+  }
+
+  public int getId() {
+    return mId;
+  }
+
+  public static Words locate(int id) {
+    try {
+      return werds.get(id - 1);
+    } catch (IndexOutOfBoundsException e) {
+      return null;
+    }
+  }
 }
