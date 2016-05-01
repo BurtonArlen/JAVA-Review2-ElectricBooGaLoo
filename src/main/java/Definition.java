@@ -15,4 +15,29 @@ public class Definition {
     return mDefine;
   }
 
+  public Boolean doesExist(){
+    return true;
+  }
+
+  public static ArrayList<Definition> all(){
+    return defs;
+  }
+
+  public static void noDefs() {
+    defs.clear();
+  }
+
+  public int getId(){
+    return mId;
+  }
+
+  public static Definition locate(int id){
+    try{
+      return defs.get(id-1);
+    } catch (IndexOutOfBoundsException e){
+      return null;
+    }
+  }
+
+
 }
