@@ -1,0 +1,11 @@
+<h3>Add a new todo: </h3>
+<form action='/definitionPost' method='post'>
+
+  <div class="form-group">
+    <label for="definition">Task definition</label>
+    <input id="definition" name="definition" type="text">
+  </div>
+  <input id="wordId" name="wordId" type="hidden" value="$word.getId()">
+
+  <button type="submit" class="btn btn-info">Add Definition</button>
+</form>

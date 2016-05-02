@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WordsTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-05-02T02:58:48" hostname="MacBookMillerTheZodiacKiller.local" time="0.007">
+<testsuite name="WordsTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-05-02T06:35:36" hostname="MacBookMillerTheZodiacKiller.local" time="0.004">
   <properties/>
-  <testcase name="category_instantiatesCorrectly_true" classname="WordsTest" time="0.001"/>
+  <testcase name="category_instantiatesCorrectly_true" classname="WordsTest" time="0.0"/>
   <testcase name="getId_categoriesInstantiateWithAnId_1" classname="WordsTest" time="0.0"/>
   <testcase name="locate_returnsNullWhenNoWordsFound_null" classname="WordsTest" time="0.0"/>
   <testcase name="all_returnsAllInstancesOfWords_true" classname="WordsTest" time="0.0"/>
   <testcase name="haveDefine_categoryInstantiatesWithName_String" classname="WordsTest" time="0.0"/>
   <testcase name="noWords_emptiesAllCategoriesFromList_0" classname="WordsTest" time="0.0"/>
-  <testcase name="locate_returnsWordsWithSameId_dopeWords" classname="WordsTest" time="0.002"/>
+  <testcase name="locate_returnsWordsWithSameId_dopeWords" classname="WordsTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
