@@ -18,7 +18,7 @@ public class DictionaryTest extends FluentTest {
 
   @Test public void rootTest() {
     goTo("http://localhost:4567/");
-    assertThat(pageSource()).contains("View Dictionary");
+    assertThat(pageSource()).contains("YOUR OWN UPDATABLE DICTIONARY");
   }
 
   @Test public void taskIsCreatedTest() {
