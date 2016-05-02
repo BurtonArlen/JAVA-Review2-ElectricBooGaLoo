@@ -1,9 +1,9 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-archivesBaseName = "JavaReview2-ElectricBooGaLoo"
+archivesBaseName = "javaReview2"
 version = '1.0'
-mainClassName = "Dictionary"
+mainClassName = "App"
 
 repositories {
   mavenCentral()
