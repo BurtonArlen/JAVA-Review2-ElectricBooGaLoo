@@ -2,13 +2,13 @@ import java.util.ArrayList;
 
 public class Definition {
   private String mDefine;
-  private static ArrayList<Definition> defs = new ArrayList<Definition>();
+  private static ArrayList<Definition> instances = new ArrayList<Definition>();
   private int mId;
 
   public Definition(String description) {
     mDefine = description;
-    defs.add(this);
-    mId = defs.size();
+    instances.add(this);
+    mId = instances.size();
   }
 
   public String getThaDef() {
@@ -20,11 +20,11 @@ public class Definition {
   }
 
   public static ArrayList<Definition> all(){
-    return defs;
+    return instances;
   }
 
   public static void noDefs() {
-    defs.clear();
+    instances.clear();
   }
 
   public int getId(){
@@ -33,7 +33,7 @@ public class Definition {
 
   public static Definition locate(int id){
     try{
-      return defs.get(id-1);
+      return instances.get(id-1);
     } catch (IndexOutOfBoundsException e){
       return null;
     }

@@ -2,14 +2,14 @@ import java.util.ArrayList;
 
 public class Words {
   private String mWord;
-  private static ArrayList<Words> werds = new ArrayList<Words>();
+  private static ArrayList<Words> instances = new ArrayList<Words>();
   private int mId;
   private ArrayList<Definition> mDefine;
 
   public Words(String word) {
     mWord = word;
-    werds.add(this);
-    mId = werds.size();
+    instances.add(this);
+    mId = instances.size();
     mDefine = new ArrayList<Definition>();
   }
 
@@ -26,11 +26,11 @@ public class Words {
   }
 
   public static ArrayList<Words> all() {
-    return werds;
+    return instances;
   }
 
   public static void noWords() {
-    werds.clear();
+    instances.clear();
   }
 
   public int getId() {
@@ -39,7 +39,7 @@ public class Words {
 
   public static Words locate(int id) {
     try {
-      return werds.get(id - 1);
+      return instances.get(id - 1);
     } catch (IndexOutOfBoundsException e) {
       return null;
     }
