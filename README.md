@@ -6,11 +6,11 @@
 
 ## Description
 
-under construction
+User updatable dictionary built with java
 
 ## Known Bugs
 
-_{nonfunctional routes}_
+_{button placement needs work}_
 
 ## Support and contact details
 
