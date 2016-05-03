@@ -48,20 +48,20 @@ public class Dictionary {
 
     post("/words", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      String name = request.queryParams("name");
+      String name = request.queryParams("word");
       Words newWords = new Words(name);
-      model.put("template", "templates/define.vtl");
+      model.put("template", "templates/createDefine.vtl");
       return new ModelAndView(model, "templates/layout.vtl");
     }, new VelocityTemplateEngine());
 
     post("/definitionPost", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      Words lexicon = Words.locate(Integer.parseInt(request.queryParams("lexiconId")));
-      String description = request.queryParams("description");
-      Definition definition = new Definition(description);
+      Words lexicon = Words.locate(Integer.parseInt(request.queryParams("wordId")));
+      String define = request.queryParams("def");
+      Definition definition = new Definition(define);
       lexicon.addDefine(definition);
       model.put("lexicon", lexicon);
-      model.put("template", "templates/AddWords.vtl");
+      model.put("template", "templates/dictionaryPage.vtl");
       return new ModelAndView(model, "templates/layout.vtl");
     }, new VelocityTemplateEngine());
 
