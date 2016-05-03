@@ -1,6 +1,14 @@
-h1 {
+
+.jumbotron {
+  background-color: #495136;
   text-align: center;
+  color: #f6f9c8;
 }
-body {
-  background-color: #339966;
+
+input{
+  color: #000;
+}
+
+body{
+  background-color: #202020;
 }

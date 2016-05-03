@@ -20,29 +20,7 @@ public class Dictionary {
 
     get("/words/new", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/AddWords.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
-
-    get("/words/:id/definition/new", (request, response) -> {
-      HashMap<String, Object> model = new HashMap<String, Object>();
-      Words word = Words.locate(Integer.parseInt(request.params(":id")));
-      model.put("word", word);
-      model.put("template", "templates/CreateDefine.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
-
-    get("/words", (request, response) -> {
-      HashMap<String, Object> model = new HashMap<String, Object>();
-      model.put("words", Words.all());
-      model.put("template", "templates/dictionaryPage.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
-
-    get("/definitions", (request, response) -> {
-      HashMap<String, Object> model = new HashMap<String, Object>();
-      model.put("definitions", Definition.all());
-      model.put("template", "templates/define.vtl");
+      model.put("template", "templates/addWords.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
@@ -51,16 +29,17 @@ public class Dictionary {
       String word = request.queryParams("word");
       Words newWords = new Words(word);
       model.put("template", "templates/createDefine.vtl");
+      model.put("word", newWords);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
     post("/definitionPost", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       Words word = Words.locate(Integer.parseInt(request.queryParams("wordId")));
-      //String define = request.queryParams("def");
-      //Definition definition = new Definition(define);
-      //word.addDefine(definition);
-      //model.put("word", word);
+      String define = request.queryParams("def");
+      Definition definition = new Definition(define);
+      word.addDefine(definition);
+      model.put("word", word);
       model.put("template", "templates/dictionaryPage.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
@@ -73,11 +52,11 @@ public class Dictionary {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/definitions/:id", (request, response) -> {
+    get("/words/:id/definition/new", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      Definition definition = Definition.locate(Integer.parseInt(request.params(":id")));
-      model.put("definition", definition);
-      model.put("template", "templates/definition.vtl");
+      Words word = Words.locate(Integer.parseInt(request.params(":id")));
+      model.put("word", word);
+      model.put("template", "templates/createDefine.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }

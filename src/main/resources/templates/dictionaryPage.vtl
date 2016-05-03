@@ -1,8 +1,8 @@
-<h1>All words</h1>
-<ul>
-  #foreach ($word in $words)
-    <li><a href="/words/$word.getId()">$word.getWord()</a></li>
-  #end
-</ul>
-<a href="/words/new">Add New Word</a>
-<a href="/">home</a>
+<h1>All words in Dictionary</h1>
+  <h3>
+    #foreach ($word in $word.all())
+      <span><a class="btn btn-info" href="/words/$word.getId()">$word.getWord()</a></span>
+    #end
+  </h3>
+<a class="btn btn-success" href="/words/new">Add New Word</a>
+<a class="btn btn-success" href="/">home</a>

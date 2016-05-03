@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DefinitionTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-05-03T18:08:32" hostname="MacBookMillerTheZodiacKiller.local" time="0.013">
+<testsuite name="DefinitionTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-05-03T21:44:44" hostname="MacBookMillerTheZodiacKiller.local" time="0.007">
   <properties/>
-  <testcase name="all_returnsAllInstancesOfDef_true" classname="DefinitionTest" time="0.005"/>
+  <testcase name="all_returnsAllInstancesOfDef_true" classname="DefinitionTest" time="0.004"/>
   <testcase name="locate_returnsDefinitionWithSameId_wickedDefinition" classname="DefinitionTest" time="0.001"/>
   <testcase name="noDefs_emptiesAllDefinitionsFromArrayList_0" classname="DefinitionTest" time="0.0"/>
   <testcase name="getId_defInstantiateWithAnID_1" classname="DefinitionTest" time="0.0"/>
   <testcase name="def_instantiatesWithThaDef_String" classname="DefinitionTest" time="0.0"/>
-  <testcase name="locate_returnsNullWhenNoDefinitionFound_null" classname="DefinitionTest" time="0.001"/>
-  <testcase name="def_instantiatesCorrectly_true" classname="DefinitionTest" time="0.0"/>
+  <testcase name="locate_returnsNullWhenNoDefinitionFound_null" classname="DefinitionTest" time="0.0"/>
+  <testcase name="def_instantiatesCorrectly_true" classname="DefinitionTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

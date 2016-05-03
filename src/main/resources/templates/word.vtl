@@ -1,10 +1,9 @@
 <h1>$word.getWord() Definitions:</h1>
 
-<ul>
-  #foreach($definition in $words.haveDefine())
-   <li>$Definition.getThaDef()</li>
-  #end
-</ul>
 
-<a href="/words/$words.getId()/define/new">Add a new definition</a>
-<a href="/words">Dictionary</a>
+#foreach($definition in $word.haveDefine())
+ <p>$definition.getThaDef()</p>
+#end
+
+<a class="btn btn-success" href="/words/$word.getId()/definition/new">Add a new definition</a>
+<a class="btn btn-success" href="/">home</a>
