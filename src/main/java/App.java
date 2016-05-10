@@ -6,7 +6,7 @@ import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
 import java.util.ArrayList;
 
-public class Dictionary {
+public class App {
   public static void main(String[] args) {
 
     String layout = "templates/layout.vtl";
