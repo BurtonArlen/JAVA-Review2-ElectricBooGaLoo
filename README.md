@@ -1,16 +1,15 @@
-# Project: Dictionary
+# Project: WordPuzzlerizer
 
-#### _A website where a user inputs a word and gets directed to a page to input a definition._
+#### _a website where the user inputs word and has the ability to add definitions like a dictionary, version 1.3, current as of 5.12.2016._
 
-#### By _** Arlen **_
+#### By _** Arlen Burton **_
 
 ## Description
 
-User updatable dictionary built with java
+This is the second solo project from Epicodus' Java class. It creates a website where the user inputs word and has the ability to add definitions like a dictionary.
 
-## Known Bugs
+The code and records for this open source project can be found at
 
-_{button placement needs work}_
 
 ## Support and contact details
 
@@ -18,7 +17,7 @@ Questions? Concerns? Ideas? Email: TBD
 
 ## Technologies Used
 
-The program uses Bootstrap, Java, css, gradle, spark, and velocity.
+The program uses CSS, Bootstrap, Spark, Velocity, FluentLenium, Gradle, and JAVA.
 
 ### License
 
