@@ -1,8 +1,8 @@
 <h1>All words in Dictionary</h1>
   <h3>
     #foreach ($word in $word.all())
-      <span><a class="btn btn-info" href="/words/$word.getId()">$word.getWord()</a></span>
+      <span><a id="wordDef" class="btn btn-info" href="/words/$word.getId()">$word.getWord()</a></span>
     #end
   </h3>
-<a class="btn btn-success" href="/words/new">Add New Word</a>
-<a class="btn btn-success" href="/">home</a>
+<a  class="btn btn-success" href="/words/new">Add New Word</a>
+<a id="home" class="btn btn-success" href="/">home</a>

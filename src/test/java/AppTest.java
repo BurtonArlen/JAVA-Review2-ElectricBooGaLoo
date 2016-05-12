@@ -21,42 +21,50 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("YOUR OWN UPDATABLE DICTIONARY");
   }
 
-  @Test public void taskIsCreatedTest() {
+  @Test public void wordIsCreatedTest() {
     goTo("http://localhost:4567/");
     click("a", withText("Add a New Word"));
     fill("#word").with("Holla");
-    submit(".btn");
-    assertThat(pageSource()).contains("Holla Definitions:");
+    submit("#wordButton");
+    assertThat(pageSource()).contains("Add a new definition for Holla");
   }
 
-  @Test public void taskIsDisplayedTest() {
-    goTo("http://localhost:4567/words/1");
-    click("a", withText("Add a new definition"));
-    assertThat(pageSource()).contains("Add Definition");
-  }
-
-  @Test public void multipleTasksAreDisplayedTest() {
-    goTo("http://localhost:4567/words/new");
+  @Test public void wordIsDisplayedTest() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add a New Word"));
     fill("#word").with("Holla");
-    submit(".btn");
-    goTo("http://localhost:4567/words/new");
+    submit("#wordButton");
+    fill("#def").with("Boggle");
+    click("#addDefine", withText("Add Definition"));
+    assertThat(pageSource()).contains("All words in Dictionary");
+  }
+
+  @Test public void multipleWordsAreDisplayedTest() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add a New Word"));
+    fill("#word").with("Holla");
+    submit("#wordButton");
+    fill("#def").with("Boggle");
+    click("#addDefine", withText("Add Definition"));
+    goTo("http://localhost:4567/");
+    click("a", withText("Add a New Word"));
     fill("#word").with("Rad");
-    submit(".btn");
-    click("a", withText("Add a new definition"));
+    submit("#wordButton");
+    fill("#def").with("Boggle");
+    click("#addDefine", withText("Add Definition"));
     assertThat(pageSource()).contains("Holla");
     assertThat(pageSource()).contains("Rad");
   }
 
-  @Test public void taskShowPageDisplaysDescription() {
-    goTo("http://localhost:4567/words/new");
+  @Test public void DefShowPageDisplaysDef() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add a New Word"));
     fill("#word").with("Holla");
-    submit(".btn");
-    click("a", withText("Add a new definition"));
-    click("a", withText("Holla"));
-    fill("#def").with("Rad");
-    submit(".btn");
-    assertThat(pageSource()).contains("All words in Dictionary");
-
+    submit("#wordButton");
+    fill("#def").with("Boggle");
+    click("#addDefine", withText("Add Definition"));
+    click("#wordDef", withText("Holla"));
+    assertThat(pageSource()).contains("Boggle");
   }
 
 
